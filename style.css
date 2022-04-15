@@ -366,7 +366,7 @@ Styles for the order section
 }
 .form-control::placeholder {
   font-family: var(--ff-primary);
-  color: var(--clr-grey-1);
+  color: var(--clr-grey-3);
   text-transform: capitalize;
   letter-spacing: var(--spacing);
 }
@@ -389,4 +389,58 @@ Styles for the order section
 }
 .submit-btn:hover {
   background: var(--clr-primary-light);
+}
+.contact {
+  margin-top: 3rem;
+}
+.contact-item {
+  margin-bottom: 1.75rem;
+}
+.contact-title {
+  color: var(--clr-primary);
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+}
+.contact-text {
+  text-transform: uppercase;
+}
+@media screen and (min-width: 992px) {
+  .order-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+  }
+}
+/* 
+===========================
+End of styles for the order section
+==========================
+*/ /* 
+===========================
+Styles for the footer section
+==========================
+*/
+.footer {
+  background: var(--primary-color-2);
+}
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-transform: capitalize;
+}
+.footer-links li {
+  color: var(--clr-primary);
+}
+.footer-text {
+  text-align: center;
+  margin-top: 1.25rem;
+  text-transform: uppercase;
+  color: var(--clr-white);
+  font-weight: 400;
 }
