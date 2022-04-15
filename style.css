@@ -10,17 +10,29 @@
   --primary-color-2: #020300;
   --primary-color-3: #e5e5e5;
   --primary-color-4: #da344d;
-  --primary-color-5: #ec5766;
+  --primary-color-5: #f36271;
   --primary-color-6: #ffe8c2;
   --primary-color-7: #e4ffe1;
   --primary-color-8: #f6f7f8;
   --primary-color-9: #cae9ff;
   --primary-color-10: #cae9ff;
+  --clr-primary: #da344d;
+  --clr-primary-light: #f36271;
+  --clr-grey-1: #102a42;
+  --clr-grey-5: #617d98;
+  --clr-grey-10: #f1f5f8;
+  --clr-grey-1: hsl(210, 36%, 96%);
   --clr-white: #fff;
   --transition: all linear 0.2s;
   --text-uppercase: uppercase;
   --radius: 0.5rem;
+  --ff-primary: "Catamaran", sans-serif;
+  --ff-secondary: "Grand Hotel", cursive;
+  --transition: all 0.3s linear;
+  --spacing: 0.2rem;
+  --radius: 0.5rem;
 }
+
 body {
   font-size: 1rem;
   background: var(--clr-white);
@@ -31,7 +43,7 @@ main {
   min-width: 95vw;
 }
 .section {
-  padding: 5rem 0;
+  padding: 5rem 2rem;
 }
 .section-center {
   min-width: 90vw;
@@ -82,6 +94,23 @@ ul {
   color: var(--clr-white);
   font-size: 2rem;
 }
+.links-one {
+  color: var(--primary-color-4);
+  text-align: center;
+  display: inline-block;
+  background: var(--clr-white);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 2rem;
+  transition: all 0.2s linear;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-color: transparent;
+  transition: var(--transition);
+}
 
 @media screen and (min-width: 768px) {
   .nav-button {
@@ -93,7 +122,7 @@ ul {
     gap: 1rem;
   }
   .links {
-    color: var(--clr-white);
+    /* color: var(--clr-white); */
     text-transform: capitalize;
     font-size: 1.1rem;
   }
@@ -106,24 +135,19 @@ ul {
     align-items: center;
     justify-content: space-between;
   }
-  .links-one {
-    color: var(--clr-primary-color-1);
-    text-align: center;
-    display: inline-block;
-    background: var(--clr-white);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    border-radius: 2rem;
-    transition: all 0.2s linear;
-    text-transform: capitalize;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
 }
-/* End of styles for the navbar */
-/* Styles for the hero section */
+
+/*
+==================== 
+End of styles for the navbar 
+==========================
+*/
+
+/* 
+===========================
+Styles for the hero section
+==========================
+*/
 .hero {
   background: var(--primary-color-4);
 }
@@ -142,12 +166,17 @@ ul {
   font-size: 2rem;
   color: var(--primary-color-8);
 }
+.but {
+  margin-top: 2rem;
+}
 .head-image {
   display: none;
 }
+
 @media screen and (min-width: 992px) {
   .hero-center {
     justify-content: space-between;
+    width: 80vw;
   }
   .head-image {
     display: grid;
@@ -171,14 +200,23 @@ ul {
     border-radius: var(--radius);
   }
 }
-/* End of styles for the hero section */
+/* 
+===========================
+End of styles for the hero section
+==========================
+*/
+/* 
+===========================
+Styles for the product section
+==========================
+*/
 .product {
   background: var(--primary-color-8);
 }
 .card {
   background: var(--primary-color-9);
-  width: 20rem;
-  height: 25rem;
+  width: 18rem;
+  height: 23rem;
   margin-right: auto;
   margin-left: auto;
   border-radius: var(--radius);
@@ -201,7 +239,7 @@ ul {
   .product-center {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 1rem;
     justify-content: center;
   }
 }
@@ -209,7 +247,146 @@ ul {
   .product-center {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    column-gap: 1rem;
     justify-content: center;
   }
+}
+/* 
+===========================
+End of styles for the product section
+==========================
+*/
+/* 
+===========================
+Styles for the services section
+==========================
+*/
+.services {
+  background: var(--clr-grey-1);
+}
+.service-card {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 2rem;
+  text-align: center;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  /* border: 2px solid tomato; */
+}
+.service-title {
+  margin-bottom: 1.5rem;
+  text-transform: capitalize;
+}
+.service-info {
+  width: 20rem;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.5;
+}
+@media screen and (min-width: 768px) {
+  .services-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .service-card {
+    flex: 0 0 calc(50%);
+  }
+}
+@media screen and (min-width: 992px) {
+  .services-center {
+    display: flex;
+  }
+  .service-card {
+    flex: 0 0 calc(33.33% - 1rem);
+  }
+}
+/* 
+===========================
+End of styles for the services section
+==========================
+*/
+/* 
+===========================
+Styles for the about section
+==========================
+*/
+.about {
+  background: var(--primary-color-9);
+}
+.about-info {
+  width: 25rem;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  letter-spacing: var(--spacing);
+}
+/* 
+===========================
+End of styles for the about section
+==========================
+*/
+/* 
+===========================
+Styles for the order section
+==========================
+*/
+.order {
+  background: var(--clr-grey-10);
+}
+.contact-form {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  margin: 1rem 0;
+}
+.contact-form:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.contact-form h3 {
+  padding-top: 1.25rem;
+  color: var(--clr-grey-5);
+}
+.form-group {
+  padding: 1rem 1.5rem;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  margin-bottom: 1.25rem;
+  background: var(--clr-grey-10);
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+.form-control::placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-1);
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+}
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-bottom-right-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  text-transform: uppercase;
+  background: var(--clr-primary);
+  color: var(--clr-white);
+  letter-spacing: var(--spacing);
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.submit-btn:hover {
+  background: var(--clr-primary-light);
 }
