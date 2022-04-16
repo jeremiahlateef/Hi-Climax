@@ -241,7 +241,7 @@ Styles for the about section
   background: var(--clr-white);
 }
 .about-info {
-  width: 25rem;
+  max-width: 20rem;
   margin-right: auto;
   margin-left: auto;
   text-align: center;
@@ -461,7 +461,7 @@ Styles for the footer section
 }
 .footer-links {
   display: flex;
-  gap: 1.5rem;
+  margin-right: 1rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
