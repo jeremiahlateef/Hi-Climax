@@ -260,6 +260,9 @@ Styles for the product section
 .product {
   background: var(--clr-grey-2);
 }
+.product-center {
+  padding: 0 2rem;
+}
 .product-card {
   margin-right: auto;
   margin-left: auto;
@@ -470,7 +473,8 @@ Styles for the footer section
   text-transform: capitalize;
 }
 .foot {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
   color: var(--clr-primary);
   transition: var(--transition);
 }
