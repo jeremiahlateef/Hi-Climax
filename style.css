@@ -269,7 +269,7 @@ Styles for the product section
 }
 .card {
   background: var(--primary-color-9);
-  width: 20rem;
+  width: 18rem;
   height: 23rem;
   margin-right: auto;
   margin-left: auto;
