@@ -15,7 +15,7 @@
   </head>
   <body>
     <main class="main">
-      <header class="header">
+      <header class="header" id="home">
         <!-- navbar -->
         <nav class="nav">
           <div class="nav-center">
@@ -27,25 +27,24 @@
                 class="nav-button"
               />
             </div>
-            <ul class="nav-links">
-              <li class="links">
-                why Hi-Climax
-                <span><img src="./images/icon-arrow-light.svg" alt="" /></span>
+            <ul class="nav-links" id="nav-links">
+              <li>
+                <a href="#home" class="scroll-link links">home</a>
               </li>
-              <li class="links">
-                our products
-                <span><img src="./images/icon-arrow-light.svg" alt="" /></span>
+              <li><a href="#about" class="scroll-link links">what we do</a></li>
+              <li>
+                <a href="#product" class="scroll-link links">our product</a>
               </li>
-              <li class="links">
-                what we do
-                <span><img src="./images/icon-arrow-light.svg" alt="" /></span>
+              <li>
+                <a href="#services" class="scroll-link links">why hi-climax</a>
               </li>
             </ul>
 
             <ul class="nav-links-one">
-              <li class="links links-one">
-                order our products
-                <span><img src="./images/icon-arrow-light.svg" alt="" /></span>
+              <li>
+                <a href="#order" class="scroll-link links-one"
+                  >order your product</a
+                >
               </li>
             </ul>
           </div>
@@ -54,8 +53,11 @@
         <div class="hero">
           <div class="hero-center">
             <article class="hero-title">
-              <h1>Lorem ipsum sit</h1>
-              <button class="but links-one">shop now</button>
+              <h1>Cosmetics Delights</h1>
+
+              <a href="#order" class="scroll-link">
+                <button class="but links-one">shop now</button></a
+              >
             </article>
             <article class="head-image">
               <img
@@ -69,9 +71,24 @@
         <!-- <h1>Hello</h1> -->
       </header>
     </main>
-    <section class="section product">
+    <!-- About Section -->
+    <section class="about section" id="about">
       <div class="section-title">
-        <h2>our products</h2>
+        <h2>what <span class="span-title">we do</span></h2>
+      </div>
+      <div class="about-info">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor,
+          molestias eos. Rerum totam atque ut! Temporibus, numquam mollitia
+          similique impedit voluptatem rerum tempore dolorum magni?
+        </p>
+      </div>
+    </section>
+    <!-- End of About Section -->
+    <!-- Product Section -->
+    <section class="section product" id="product">
+      <div class="section-title">
+        <h2>check out<span class="span-title"> our products</span></h2>
       </div>
       <div class="section-center product-center">
         <article class="product-card">
@@ -82,7 +99,8 @@
               class="product-image"
             />
             <div class="product-name">
-              <h3>Styling gel</h3>
+              <h4>Styling gel</h4>
+              <h5 class="price">N2500/carton</h5>
             </div>
           </div>
         </article>
@@ -94,7 +112,8 @@
               class="product-image"
             />
             <div class="product-name">
-              <h3>Styling gel</h3>
+              <h4>Styling gel</h4>
+              <h5 class="price">N2500/carton</h5>
             </div>
           </div>
         </article>
@@ -106,7 +125,8 @@
               class="product-image"
             />
             <div class="product-name">
-              <h3>Cream relaxer</h3>
+              <h4>Cream Relaxer</h4>
+              <h5 class="price">N2500/carton</h5>
             </div>
           </div>
         </article>
@@ -118,7 +138,8 @@
               class="product-image"
             />
             <div class="product-name">
-              <h3>Styling gel</h3>
+              <h4>Treatment Conditioner</h4>
+              <h5 class="price">N2500/carton</h5>
             </div>
           </div>
         </article>
@@ -130,15 +151,18 @@
               class="product-image"
             />
             <div class="product-name">
-              <h3>Styling gel</h3>
+              <h4>Treatment Shampoo</h4>
+              <h5 class="price">N2500/carton</h5>
             </div>
           </div>
         </article>
       </div>
     </section>
-    <section class="section services">
+    <!-- End of Product Section -->
+    <!-- Services Section -->
+    <section class="section services" id="services">
       <div class="section-title">
-        <h2>why hi-climax</h2>
+        <h2>why <span class="span-title">hi-climax</span></h2>
       </div>
       <div class="services-center section-center">
         <!-- service card -->
@@ -182,21 +206,11 @@
         <!-- End of service card -->
       </div>
     </section>
-    <section class="about section">
+    <!-- End of services section -->
+    <!-- Order Section -->
+    <section class="section order" id="order">
       <div class="section-title">
-        <h2>what we do</h2>
-      </div>
-      <div class="about-info">
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor,
-          molestias eos. Rerum totam atque ut! Temporibus, numquam mollitia
-          similique impedit voluptatem rerum tempore dolorum magni?
-        </p>
-      </div>
-    </section>
-    <section class="section order">
-      <div class="section-title">
-        <h2>order your products</h2>
+        <h2>order <span class="span-title">your products</span></h2>
       </div>
       <div class="order-center section-center">
         <article class="contact-form">
@@ -289,32 +303,34 @@
         </article>
       </div>
     </section>
+    <!-- End of order section -->
+    <!-- footer section -->
     <footer class="section footer">
       <ul class="footer-links">
-        <li class="links">
-          why Hi-Climax
-          <span><img src="./images/icon-arrow-light.svg" alt="" /></span>
+        <li>
+          <a href="#home" class="scroll-link links foot">home</a>
         </li>
-        <li class="links">
-          our products
-          <span><img src="./images/icon-arrow-light.svg" alt="" /></span>
+        <li><a href="#about" class="scroll-link links foot">what we do</a></li>
+        <li>
+          <a href="#product" class="scroll-link links foot">our product</a>
         </li>
-        <li class="links">
-          what we do
-          <span><img src="./images/icon-arrow-light.svg" alt="" /></span>
+        <li>
+          <a href="#services" class="scroll-link links foot">why hi-climax</a>
         </li>
-        <li class="links">
-          order our products
-          <span><img src="./images/icon-arrow-light.svg" alt="" /></span>
+        <li>
+          <a href="#order" class="scroll-link links foot">order our products</a>
         </li>
       </ul>
       <div class="footer-text">
         <h4>
-          &copy; <span id="date"></span>
-          <span class="company">Hi-Climax 2022.</span>
+          &copy;
+          <span class="company">Hi-Climax <span id="date"></span>.</span>
           all rights reserved
         </h4>
       </div>
     </footer>
+    <!-- End of footer section -->
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
   </body>
 </html>
