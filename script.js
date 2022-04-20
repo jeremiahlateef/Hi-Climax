@@ -1,16 +1,24 @@
+"use strict";
+// ********** modal ************
+const navBar = document.querySelector(".nav-button");
+const showModal = document.querySelector(".hide");
+navBar.addEventListener("click", function () {
+  showModal.classList.toggle("hide");
+});
+
 // ********** set date ************
-// select span
+// // select span
 const date = (document.getElementById("date").innerHTML =
   new Date().getFullYear());
 
-// ********** nav toggle ************
-// select button and links
-const navBtn = document.getElementById("nav-toggle");
-const links = document.getElementById("nav-links");
-// add event listener
-navBtn.addEventListener("click", () => {
-  links.classList.toggle("show-links");
-});
+// // ********** nav toggle ************
+// // select button and links
+// const navBtn = document.getElementById("nav-toggle");
+// const links = document.getElementById("nav-links");
+// // add event listener
+// navBtn.addEventListener("click", () => {
+//   links.classList.toggle("show-links");
+// });
 
 // ********** smooth scroll ************
 // select links
