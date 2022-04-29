@@ -1,4 +1,3 @@
-"use strict";
 // ********** modal ************
 const navBar = document.querySelector(".nav-button");
 const showModal = document.querySelector(".hide");
