@@ -86,17 +86,27 @@ h4 {
   padding-left: 2rem;
   padding-right: 2rem;
   display: grid;
+  height: 5rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+.nav-center {
+  display: grid;
+  align-items: center;
 }
 .nav-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  height: 5rem;
 }
 .nav-links,
 .nav-links-one {
   display: none;
+}
+.btn {
+  display: grid;
+  text-align: center;
+  justify-content: center;
 }
 .logo,
 .nav-button {
@@ -121,8 +131,8 @@ h4 {
   background: var(--clr-white);
   padding-top: 1rem;
   padding-bottom: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   border-radius: 2rem;
   transition: all 0.2s linear;
   text-transform: capitalize;
@@ -215,7 +225,7 @@ Styles for the hero section
   background: var(--clr-primary);
 }
 .hero-center {
-  min-height: calc(100vh - 5rem);
+  min-height: calc(100vh - 8rem);
   margin-right: auto;
   margin-left: auto;
   display: flex;
@@ -246,8 +256,7 @@ Styles for the hero section
 
 @media screen and (min-width: 992px) {
   .hero-center {
-    justify-content: space-between;
-    width: 80vw;
+    justify-content: space-around;
   }
   .head-image {
     display: grid;
