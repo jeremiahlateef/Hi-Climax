@@ -1,6 +1,7 @@
-// ********** modal ************
 const navBar = document.querySelector(".nav-button");
 const showModal = document.querySelector(".hide");
+
+// ********** modal ************
 navBar.addEventListener("click", function () {
   showModal.classList.toggle("hide");
 });
@@ -10,34 +11,14 @@ navBar.addEventListener("click", function () {
 const date = (document.getElementById("date").innerHTML =
   new Date().getFullYear());
 
-// ********** nav toggle ************
-// select button and links
-const navBtn = document.getElementById("nav-toggle");
-const links = document.getElementById("nav-links");
-// add event listener
-navBtn.addEventListener("click", () => {
-  links.classList.toggle("show-links");
-});
-
-// ********** smooth scroll ************
-// select links
-const scrollLinks = document.querySelectorAll(".scroll-link");
-scrollLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    // prevent default
+// // ********** smooth scroll ************
+const smoothScroll = document.querySelectorAll("#nav-links").forEach((el) =>
+  el.addEventListener("click", function (e) {
     e.preventDefault();
-    links.classList.remove("show-links");
 
-    const id = e.target.getAttribute("href").slice(1);
-    const element = document.getElementById(id);
-    //
-    let position = element.offsetTop - 62;
-
-    window.scrollTo({
-      left: 0,
-      // top: element.offsetTop,
-      top: position,
-      behavior: "smooth",
-    });
-  });
-});
+    if (e.target.classList.contains("scroll-link")) {
+      const id = e.target.getAttribute("href");
+      document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+    }
+  })
+);
